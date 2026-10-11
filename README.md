@@ -6,7 +6,7 @@ Buildmate is a small, focused digital delivery team helping agencies and startup
 
 ## Current website
 
-A responsive, dependency-free static homepage is in `index.html`. It uses a human, team-led story and avoids invented testimonials, client logos, and unsupported metrics.
+A responsive, dependency-free static homepage is in `index.html`. It uses a human, team-led story and avoids invented testimonials, client logos, and unsupported metrics. The homepage currently shows 3 live projects and 5 completed project/deliverable items based on the founder’s current account; confirm the counting method before launch.
 
 ## Before publishing
 
