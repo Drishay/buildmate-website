@@ -14,7 +14,7 @@ The homepage is a dependency-free, responsive static site in `index.html`. It us
 ## Homepage narrative
 
 1. **Promise:** the four-part motto.
-2. **Proof:** verified project metrics. The live and completed project counts are deliberately left as placeholders until the team supplies real figures.
+2. **Proof:** verified project metrics. The homepage displays 3 live projects and 5 completed project/deliverable items based on the founder’s current account; confirm counting method before launch.
 3. **Origin:** a group of friends with complementary skills building a focused delivery team.
 4. **Offer:** web development, UI/UX, QA, and maintenance/support.
 5. **Work:** case-study slots with an explicit warning to replace them with real work or label demos honestly.
@@ -24,7 +24,7 @@ The homepage is a dependency-free, responsive static site in `index.html`. It us
 
 ## Before launch
 
-- Replace the “Add count” labels in the metrics section with verified live and completed project numbers.
+- The homepage currently displays 3 live projects and 5 completed project/deliverable items based on the founder’s account; confirm that these are the preferred counting method before launch.
 - Replace case-study placeholders with actual work, or remove them until the team has suitable examples.
 - Replace `REPLACE_WITH_REAL_BUSINESS_EMAIL` in the contact button with the business email.
 - Replace the temporary Unsplash imagery with approved team and project photos where possible.
