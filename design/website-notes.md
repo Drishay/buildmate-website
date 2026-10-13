@@ -50,3 +50,12 @@ The homepage includes indicative guide pricing: manual QA from $20/hour; web dev
 - `assets/js/work.js`: work-page navigation, year, and category filters.
 
 The contact CTA uses the supplied address `BRISHAYCHAUHAN3357@gmail.com`. Confirm spelling before launch.
+
+
+## Supporting pages
+
+- `work.html`: full work portfolio, opened in a new tab from the homepage selected-work CTA.
+- `team.html`: team profile templates; replace all placeholders with approved names, skills, GitHub/LinkedIn URLs, and resume links before launch.
+- `legal.html`: combined Terms & Conditions and Privacy Policy with sticky section navigation. It is a draft template and should be reviewed against actual practices and applicable law before launch.
+- Footer links to Terms & Conditions and Privacy Policy open `legal.html` in a new tab.
+- Contact links open Gmail compose in a new tab. On mobile, app opening depends on browser and operating-system link handling.
