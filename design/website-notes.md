@@ -35,3 +35,8 @@ The homepage is a dependency-free, responsive static site in `index.html`. It us
 ## Deploying
 
 This is a static `index.html` page. It can be deployed to GitHub Pages, Netlify, Vercel, or another static host without a framework build command.
+
+
+## Pricing section
+
+The homepage includes indicative guide pricing: manual QA from $20/hour; web development landing pages by custom fixed-scope quote; maintenance and fixes by custom quote. Confirm the rate and exact scope before launch. Browser zoom is a user/browser preference and cannot be reliably synchronized between separate pages with website code.
