@@ -40,3 +40,13 @@ This is a static `index.html` page. It can be deployed to GitHub Pages, Netlify,
 ## Pricing section
 
 The homepage includes indicative guide pricing: manual QA from $20/hour; web development landing pages by custom fixed-scope quote; maintenance and fixes by custom quote. Confirm the rate and exact scope before launch. Browser zoom is a user/browser preference and cannot be reliably synchronized between separate pages with website code.
+
+
+## Asset structure
+
+- `assets/css/styles.css`: homepage styles.
+- `assets/css/work.css`: portfolio page styles.
+- `assets/js/main.js`: homepage navigation, year, and reveal effects.
+- `assets/js/work.js`: work-page navigation, year, and category filters.
+
+The contact CTA uses the supplied address `BRISHAYCHAUHAN3357@gmail.com`. Confirm spelling before launch.
