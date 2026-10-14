@@ -19,37 +19,46 @@
     <div class="footer-bottom"><span>October 2026 · Buildmate. All rights reserved.</span><span>Built with care by the remote-friendly Buildmate team.</span></div>
   </div>
 </footer><script>
-document.getElementById('year').textContent = new Date().getFullYear();
-const legalSections = [...document.querySelectorAll('.legal-content > section[id]')];
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
+const privacySection = document.getElementById('privacy');
 const tocLinks = [...document.querySelectorAll('.legal-sidebar a')];
-const updateLegalToc = () => {
-  const marker = 170;
-  let current = legalSections[0]?.id || 'terms';
-  for (const section of legalSections) {
-    if (section.getBoundingClientRect().top <= marker) current = section.id;
-  }
-  const activeParent = current === 'privacy' ? 'privacy' : 'terms';
+const marker = 180;
+
+function updateLegalToc() {
+  if (!privacySection) return;
+  const currentParent = privacySection.getBoundingClientRect().top <= marker ? 'privacy' : 'terms';
+
   tocLinks.forEach(link => {
-    const parent = link.dataset.parent;
+    if (link.classList.contains('legal-parent')) {
+      link.classList.toggle('active', link.dataset.parent === currentParent);
+      return;
+    }
+    if (!link.classList.contains('legal-child') || link.dataset.parent !== currentParent) {
+      link.classList.remove('active');
+      return;
+    }
     const target = document.getElementById(link.hash.slice(1));
-    const isExact = link.hash === '#' + current;
-    const isChild = link.classList.contains('legal-child') && target && target.getBoundingClientRect().top <= marker + 12;
-    link.classList.toggle('active', isExact || isChild);
-    if (link.classList.contains('legal-parent')) link.classList.toggle('active', parent === activeParent && current === parent);
+    link.classList.remove('active');
   });
-  const children = tocLinks.filter(link => link.classList.contains('legal-child') && link.dataset.parent === activeParent);
+
+  const children = tocLinks.filter(link =>
+    link.classList.contains('legal-child') && link.dataset.parent === currentParent
+  );
   let currentChild = null;
-  for (const link of children) {
+  children.forEach(link => {
     const target = document.getElementById(link.hash.slice(1));
     if (target && target.getBoundingClientRect().top <= marker) currentChild = link;
-  }
-  children.forEach(link => link.classList.toggle('active', link === currentChild));
-};
+  });
+  if (currentChild) currentChild.classList.add('active');
+}
+
 window.addEventListener('scroll', updateLegalToc, { passive: true });
 window.addEventListener('resize', updateLegalToc);
 tocLinks.forEach(link => link.addEventListener('click', () => {
   if (link.classList.contains('legal-parent')) {
-    tocLinks.filter(item => item.classList.contains('legal-parent')).forEach(item => item.classList.toggle('active', item === link));
+    tocLinks.filter(item => item.classList.contains('legal-parent'))
+      .forEach(item => item.classList.toggle('active', item === link));
   }
 }));
 updateLegalToc();
